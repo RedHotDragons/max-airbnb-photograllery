@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const port = 8000;
 const axios = require('axios');
-const fetchphotos = require('../helper/aws.js');
+const db = require('../Database/searchdb.js');
+
 
 
 app.use(express.static(__dirname +'/../client/dist'))
@@ -10,15 +11,22 @@ app.use(express.static(__dirname +'/../client/dist'))
 app.get('/req', function (req,res) {
   //get the correct folder name and the number of photos from the mysql database
   //invoke the fetchphotos function
-  fetchphotos.fetchphotos(res);
+
+  db.searchdb((err,listing) => {
+    if(err) {
+      res.status(400)
+      res.end();
+    }
+    res.send(listing);
+  })
 })
 
 
-app.listen(port, function () {
+var server = app.listen(port, function () {
 
   console.log(`Server is listening on port: ${port}`);
-})
+});
 
 
 
-// module.exports.app = app;
+module.exports.server = server;

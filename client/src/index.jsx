@@ -1,27 +1,9 @@
-import axios from 'axios';
-
-class Component extends React.Component {
-  constructor (props) {
-    super(props);
-  }
-
-  componentDidMount () {
-    axios.get('/req')
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-  }
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
 
 
-  render () {
-    return (
-      <div>HELLLO WORLD</div>
-    );
-  }
-}
 
 
-ReactDOM.render(<Component/>, document.getElementById('app'));
+
+ReactDOM.render(<App/>, document.getElementById('app'));
