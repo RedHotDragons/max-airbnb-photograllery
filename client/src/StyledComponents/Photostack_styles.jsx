@@ -17,6 +17,7 @@ const Modal = styled.div`
 
 const Scroll = styled.button`
   margin:20px;
+  margin-bottom:54vh;
   box-sizing: border-box;
   height:50px;
   width:50px;

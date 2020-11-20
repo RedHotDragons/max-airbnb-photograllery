@@ -7,6 +7,7 @@ const Photobox = styled.div`
   height: 54vh;
   min-height: 273px;
   width: 87vw;
+  min-width: 720px;
   max-width: 928px;
   margin-top: 20vh;
 
@@ -21,13 +22,14 @@ const Photobox = styled.div`
 
 const Previews = styled.div`
   background-color: teal;
+  background-size: 120% 120%;
 `
 
 const Main = styled(Previews)`
   grid-row: 1/3;
   border-top-left-radius: 1.8vh;
   border-bottom-left-radius: 1.8vh;
-  background-image: url("https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo1.jpg");
+  background-size: 100% 100%;
 `
 
 const Photo2 = styled(Previews)`
@@ -40,6 +42,7 @@ const Photo4 = styled(Previews)`
 const ShowPhotos = styled.button`
   outline:none;
   background-color: white;
+  border: 0.8px solid black;
   border-radius:3px;
   position:absolute;
   margin-top: 46.5vh;

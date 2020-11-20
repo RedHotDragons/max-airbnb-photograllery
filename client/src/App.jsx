@@ -19,9 +19,10 @@ export default class App extends React.Component {
     this.extracturls = this.extracturls.bind(this);
     this.changeindex = this.changeindex.bind(this);
     this.Sharemodal = this.Sharemodal.bind(this);
+    this.Modalsetup = this.Modalsetup.bind(this);
   }
 
-  componentDidMount () {
+  componentWillMount () {
     axios.get('/req')
     .then((data) => {
 
@@ -59,20 +60,28 @@ export default class App extends React.Component {
     },this.Stackmodal);
   }
 
+  Modalsetup() {
+    window.scrollTo(0,0);
+    document.body.classList.toggle("lock");
+
+  }
+
   Stackmodal () {
+    this.Modalsetup();
     this.setState({
       homepage: !this.state.homepage
     })
   }
 
   Sharemodal () {
+    this.Modalsetup();
     this.setState({
       share:!this.state.share
     })
   }
 
   render () {
-
+    console.log(this.state.urls);
     return (
       <div className = "photogallery">
         <Navbar/>
@@ -82,6 +91,7 @@ export default class App extends React.Component {
         {this.state.homepage === false
         ? <Photostack images = {this.state.urls} index = {this.state.index} hidestack = {this.Stackmodal}  Sharemodal = {this.Sharemodal}/>
         : (1+2)}
+        <div className = "static"></div>
       </div>
 
     );

@@ -3,9 +3,12 @@ import styled from 'styled-components';
 
 
 var Image = styled.div`
-  height:500px;
-  width:500px;
   background-image: url("${props => props.image}");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 66.64%;
 `
 
 
