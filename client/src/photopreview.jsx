@@ -39,4 +39,7 @@ class Photopreview extends React.Component {
 
 }
 
+
+
+
 export default Photopreview;
