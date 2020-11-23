@@ -56,7 +56,7 @@ module.exports.Sonja = Sonja;
 
 
 
-// var Sonja = new sixphotos ({
+// var Sonja = new Sonja ({
 //   name:'Sonja',
 //   photo1:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo1.jpg',
 //   photo2:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo2.jpg',
