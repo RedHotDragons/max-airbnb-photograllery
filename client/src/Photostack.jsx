@@ -18,7 +18,7 @@ class Photostack extends React.Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.checkends = this.checkends.bind(this);
-    this.exit = this.exit.bind(this);
+    this.exitSharemodal = this.exitSharemodal.bind(this);
   }
 
   componentDidMount() {
@@ -29,10 +29,11 @@ class Photostack extends React.Component {
   }
 
 
-  exit () {
-    var modal = document.getElementsByClassName('modal')[0]
-    modal.classList.add('takeout');
-    modal.addEventListener('animationend', this.props.hidestack)
+  exitSharemodal () {
+    //why is the class value getting overwritted
+    var modal = document.getElementsByClassName('stackmodal')[0];
+    modal.id = 'exitSharemodal';
+    modal.addEventListener('animationend',this.props.hidephotostack);
   }
 
   next(event) {
@@ -70,9 +71,9 @@ class Photostack extends React.Component {
 
   render () {
     return (
-      <Modal className = 'modal'>
+      <Modal className = 'stackmodal'>
         <Row1>
-          <Close onClick = {this.exit} className = "hover">
+          <Close onClick = {this.exitSharemodal} className = "hover">
             <i class="fas fa-times"></i>
             <Label>Close</Label>
           </Close>
