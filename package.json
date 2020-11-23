@@ -33,7 +33,7 @@
     "webpack-cli": "^4.2.0"
   },
   "scripts": {
-    "server": "nodemon ./server/index.js",
+    "start": "nodemon ./server/index.js",
     "react-dev": "webpack --watch",
     "test": "jest"
   },

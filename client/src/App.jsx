@@ -22,7 +22,7 @@ export default class App extends React.Component {
     this.Modalsetup = this.Modalsetup.bind(this);
   }
 
-  componentWillMount () {
+  componentDidMount () {
     axios.get('/api/photo-gallery/data')
     .then((data) => {
 
@@ -67,6 +67,8 @@ export default class App extends React.Component {
   }
 
   Stackmodal () {
+    console.log(this.Stackmodal, "in APP.jsx");
+    console.log('im heeere');
     this.Modalsetup();
     this.setState({
       homepage: !this.state.homepage
@@ -89,7 +91,7 @@ export default class App extends React.Component {
         <Sharemodal status = {this.state.share} changestatus = {this.Sharemodal}/>
         <Photopreview showstack = {this.changeindex} photos = {this.state.urls}/>
         {this.state.homepage === false
-        ? <Photostack images = {this.state.urls} index = {this.state.index} hidestack = {this.Stackmodal}  Sharemodal = {this.Sharemodal}/>
+        ? <Photostack images = {this.state.urls} index = {this.state.index} hidephotostack = {this.Stackmodal}  Sharemodal = {this.Sharemodal}/>
         : (1+2)}
         <div className = "static"></div>
       </div>

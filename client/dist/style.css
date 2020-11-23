@@ -61,11 +61,12 @@ body {
 
 }
 
-.takeout {
-  animation: slideout 0.3s ease-in;
+#exitSharemodal {
+  /* background-color: plum; */
+  animation: slideoutmodal 0.3s ease-in;
 }
 
-@keyframes slideout{
+@keyframes slideoutmodal{
   0%{
     transform: translateY(0vh);
     opacity: 1;
