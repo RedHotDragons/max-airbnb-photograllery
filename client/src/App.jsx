@@ -61,7 +61,6 @@ export default class App extends React.Component {
   }
 
   Modalsetup() {
-    window.scrollTo(0,0);
     document.body.classList.toggle("lock");
 
   }
