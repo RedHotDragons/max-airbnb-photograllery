@@ -11,7 +11,7 @@ const Modal = styled.div`
   padding-right: 2.5vw;
   background-color: white;
   z-index: 2;
-  position:absolute;
+  position:fixed;
   animation: slidein .5s ease-in ;
 `
 

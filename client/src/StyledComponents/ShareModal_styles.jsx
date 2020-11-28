@@ -8,7 +8,7 @@ const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items:center;
-  position:absolute;
+  position:fixed;
   z-index:3;
 `
 
