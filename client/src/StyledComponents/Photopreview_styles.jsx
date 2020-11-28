@@ -7,7 +7,7 @@ const Photobox = styled.div`
   height: 54vh;
   min-height: 273px;
   width: 87vw;
-  min-width: 720px;
+  min-width: 760px;
   max-width: 928px;
   margin-top: 20vh;
 

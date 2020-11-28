@@ -30,7 +30,7 @@ const Searchbar = styled.div`
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items:center;
 
 `
@@ -66,4 +66,16 @@ const Menu = styled(Navints)`
   border: 0.5px solid rgba(90,90,90,0.7);
 `
 
-export {NavbarWrap, NavbarCont, Searchbar, Search, Navints, Menu};
+const Searchinput = styled.input`
+  width: 60%;
+  margin-left:5px;
+  border: transparent;
+  outline:none;
+`
+
+const Logo = styled.div`
+  display:flex;
+  align-items:center;
+`
+
+export {NavbarWrap, NavbarCont, Searchbar, Search, Navints, Menu, Searchinput, Logo};

@@ -23,7 +23,7 @@ class Photopreview extends React.Component {
     this.photosupplier();
     return (
       <Photobox id = "photobox" >
-        <Main onClick = {this.props.showstack} className = "0 previewphoto" ></Main>
+        <Main onClick = {this.props.showstack} className = "main 0 previewphoto" ></Main>
         <Previews onClick = {this.props.showstack} className = "1 previewphoto"></Previews>
         <Photo2 onClick = {this.props.showstack} className = "2 previewphoto"></Photo2>
         <Previews onClick = {this.props.showstack} className = "3 previewphoto"></Previews>
