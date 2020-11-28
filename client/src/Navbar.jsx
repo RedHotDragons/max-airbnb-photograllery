@@ -1,14 +1,15 @@
 import React from 'react';
-import {NavbarWrap, NavbarCont, Searchbar, Search, Navints, Menu} from './StyledComponents/Navbar_styles.jsx';
+import {NavbarWrap, NavbarCont, Searchbar, Search, Navints, Menu, Searchinput, Logo} from './StyledComponents/Navbar_styles.jsx';
 const Navbar = () => {
   return (
     <NavbarWrap>
       <NavbarCont>
-        <div>
+        <Logo>
           <i className ="fab fa-airbnb fa-2x logo"></i>
           <label className = 'logo'>airbnb</label>
-        </div>
+        </Logo>
         <Searchbar>
+          <Searchinput />
           <Search>
             <i class="fas fa-search"></i>
           </Search>
