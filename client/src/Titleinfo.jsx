@@ -3,7 +3,7 @@ import {Topholder,Name, Search, Spacers, Dark, Light, Med, Social, SocialMed} fr
 
 var Titleinfo = (props) => {
   return (
-    <Topholder>
+    <Topholder id = 'titleinfo'>
       <Name>
       Vintage Ranch - Paso Robles
       </Name>

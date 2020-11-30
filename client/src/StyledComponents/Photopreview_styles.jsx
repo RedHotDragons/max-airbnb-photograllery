@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 
 const Photobox = styled.div`
-  height: 54vh;
+  grid-area: PhotoContent;
+  height: 100%;
+  width: 100%;
   min-height: 273px;
-  width: 87vw;
-  min-width: 760px;
   max-width: 928px;
-  margin-top: 20vh;
+
 
   position:fixed;
   display: grid;
