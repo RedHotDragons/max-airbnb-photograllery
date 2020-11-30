@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 
 const NavbarWrap = styled.div`
+  grid-area:Nav;
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 8.7vh;
-  max-height: 8.7vh;
+  width: 100%;
+  height: 100%;
+
   box-shadow: 0px 20px 30px -25px rgba(0,0,0,0.1);
   background-color: white;
   position: absolute;

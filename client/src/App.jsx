@@ -4,7 +4,8 @@ import Photopreview from './photopreview.jsx';
 import Photostack from './Photostack.jsx';
 import Navbar from './Navbar.jsx';
 import Sharemodal from './ShareModal.jsx';
-import Titleinfo from './Titleinfo.jsx'
+import Titleinfo from './Titleinfo.jsx';
+import {Wrap, PhotoGallery, Staticinfo} from './StyledComponents/App_styles.jsx';
 
 export default class App extends React.Component {
   constructor (props) {
@@ -84,17 +85,21 @@ export default class App extends React.Component {
   render () {
     console.log(this.state.urls);
     return (
-      <div className = "photogallery">
-        <Navbar/>
-        <Titleinfo Sharemodal = {this.Sharemodal}/>
-        <Sharemodal status = {this.state.share} changestatus = {this.Sharemodal}/>
-        <Photopreview showstack = {this.changeindex} photos = {this.state.urls}/>
-        {this.state.homepage === false
-        ? <Photostack images = {this.state.urls} index = {this.state.index} hidephotostack = {this.Stackmodal}  Sharemodal = {this.Sharemodal}/>
-        : (1+2)}
-        <div className = "static"></div>
-      </div>
+      <div>
+        <Wrap>
+          <PhotoGallery id = 'contentwrap'>
+            <Navbar/>
+            <Titleinfo Sharemodal = {this.Sharemodal}/>
+            <Photopreview showstack = {this.changeindex} photos = {this.state.urls}/>
+            <Staticinfo/>
+          </PhotoGallery>
+        </Wrap>
 
+        <Sharemodal status = {this.state.share} changestatus = {this.Sharemodal}/>
+        {this.state.homepage === false
+          ? <Photostack images = {this.state.urls} index = {this.state.index} hidephotostack = {this.Stackmodal}  Sharemodal = {this.Sharemodal}/>
+          : (1+2)}
+      </div>
     );
   }
 }

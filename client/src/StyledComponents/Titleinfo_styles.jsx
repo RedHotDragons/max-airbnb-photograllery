@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 
 const Topholder = styled.div`
-  margin-top: 8.8vh;
-  height: 10vh;
-  width:87.2vw;
-  max-width: 928px;
+  grid-area: TitleInfo;
+  height: 95%;
+  width: 100%;
+
 `
 
 const Name = styled.div`
@@ -25,6 +25,7 @@ const Search = styled.div`
   display:flex;
   justify-content: space-between;
   align-items: center;
+  padding-right:10px;
 `
 
 const Spacers = styled.div`

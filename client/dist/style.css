@@ -110,11 +110,26 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
+  #contentwrap {
+    grid-template-columns: 0.02fr 1fr 0.04fr;
+    grid-template-rows: 4.1rem 54.3vh 5.8rem  1fr;
+    grid-template-areas:
+      "Nav Nav Nav"
+      "PhotoContent PhotoContent PhotoContent"
+      ". TitleInfo ."
+      ". static .";
+  }
   #photobox {
     grid-template: 1fr / 1fr;
   }
   .main {
     grid-area: 1/1/2/2;
+    border-radius: 0px;
+  }
+
+  #titleinfo{
+    padding-bottom: 3px;
+    border-bottom: 0.2px solid rgba(0,0,0,0.1);
   }
 }
 
