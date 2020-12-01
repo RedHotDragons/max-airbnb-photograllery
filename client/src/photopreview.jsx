@@ -1,5 +1,5 @@
 import React from 'react';
-import {Photobox, Previews, Main, Photo2, Photo4, ShowPhotos} from './StyledComponents/Photopreview_styles.jsx'
+import {Photobox, Previews, Main, Photo1, Photo2, Photo3, Photo4, ShowPhotos} from './StyledComponents/Photopreview_styles.jsx'
 
 class Photopreview extends React.Component {
   constructor(props) {
@@ -24,11 +24,11 @@ class Photopreview extends React.Component {
     return (
       <Photobox id = "photobox" >
         <Main onClick = {this.props.showstack} className = "main 0 previewphoto" ></Main>
-        <Previews onClick = {this.props.showstack} className = "1 previewphoto"></Previews>
+        <Photo1 onClick = {this.props.showstack} className = "1 previewphoto"></Photo1>
         <Photo2 onClick = {this.props.showstack} className = "2 previewphoto"></Photo2>
-        <Previews onClick = {this.props.showstack} className = "3 previewphoto"></Previews>
+        <Photo3 onClick = {this.props.showstack} className = "3 previewphoto"></Photo3>
         <Photo4 onClick = {this.props.showstack} className = "4 previewphoto"></Photo4>
-        <ShowPhotos onClick = {this.buttonhandle} className = "hover">
+        <ShowPhotos onClick = {this.buttonhandle} className = "hover showall">
           <i class="fas fa-ellipsis-v"></i>
           Show All Photos
         </ShowPhotos>
