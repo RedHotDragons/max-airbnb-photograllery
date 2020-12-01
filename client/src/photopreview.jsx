@@ -28,7 +28,7 @@ class Photopreview extends React.Component {
         <Photo2 onClick = {this.props.showstack} className = "2 previewphoto"></Photo2>
         <Photo3 onClick = {this.props.showstack} className = "3 previewphoto"></Photo3>
         <Photo4 onClick = {this.props.showstack} className = "4 previewphoto"></Photo4>
-        <ShowPhotos onClick = {this.buttonhandle} className = "hover">
+        <ShowPhotos onClick = {this.buttonhandle} className = "hover showall">
           <i class="fas fa-ellipsis-v"></i>
           Show All Photos
         </ShowPhotos>

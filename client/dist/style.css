@@ -109,6 +109,12 @@ body {
   margin-right: 38vw;
 }
 
+@media only screen and (min-width: 761px) {
+  .showall {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 760px) {
   #contentwrap {
     grid-template-columns: 0.02fr 1fr 0.04fr;
@@ -130,6 +136,9 @@ body {
   #titleinfo{
     padding-bottom: 3px;
     border-bottom: 0.2px solid rgba(0,0,0,0.1);
+  }
+  .showall {
+    display: none;
   }
 }
 
