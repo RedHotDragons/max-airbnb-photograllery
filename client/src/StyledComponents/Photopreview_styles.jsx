@@ -15,6 +15,9 @@ const Photobox = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-template-areas :
+    " Main photo1 photo2"
+    " Main photo3 photo4";
   gap: .4em;
   position:absolute;
   z-index:0;
@@ -22,33 +25,41 @@ const Photobox = styled.div`
 
 const Previews = styled.div`
   background-color: teal;
-  background-size: 120% 120%;
+  background-size: max(220px ,120%) 120%;
 `
 
 const Main = styled(Previews)`
-  grid-row: 1/3;
+  grid-area: Main;
   border-top-left-radius: 1.8vh;
   border-bottom-left-radius: 1.8vh;
   background-size: 100% 100%;
 `
+const Photo1 = styled(Previews)`
+  grid-area: photo1;
+`
 
 const Photo2 = styled(Previews)`
+  grid-area: photo2;
   border-top-right-radius: 1.8vh;
 `
 
+const Photo3 = styled(Previews)`
+  grid-area: photo3;
+`
+
 const Photo4 = styled(Previews)`
+  grid-area: photo4;
   border-bottom-right-radius: 1.8vh;
+  z-index: 4;
 `
 const ShowPhotos = styled.button`
+  grid-area: photo4;
   outline:none;
   background-color: white;
   border: 0.8px solid black;
   border-radius:3px;
-  position:absolute;
-  margin-top: 46.5vh;
-  margin-left: min(72vw, 800px);
-
-  z-index: 1;
+  place-self: end;
+  z-index: 5;
 `
 
-export {Photobox, Previews, Main, Photo2, Photo4, ShowPhotos};
+export {Photobox, Previews, Main, Photo1, Photo2, Photo3, Photo4, ShowPhotos};
