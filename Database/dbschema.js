@@ -69,4 +69,7 @@ module.exports.Sonja = Sonja;
 
 // Sonja.save();
 
+// node ./Database/dbschema.js
 
+// install mongo
+// then rerun node command
