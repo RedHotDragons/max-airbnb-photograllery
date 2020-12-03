@@ -1,11 +1,9 @@
-# airbnb-photogallery
-
-## Get intro info
-- GET /api/intros/:id
-Path Parameters:
-- id intro id
-Success Status Code: 200
-Returns: JSON
+## Get intro info  
+- GET /api/intros/:id  
+Path Parameters:  
+- id intro id  
+Success Status Code: 200  
+Returns: JSON  
 ``` 
 {
   id: “Integer”, 
