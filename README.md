@@ -6,7 +6,7 @@ Path Parameters:
 - id intro id
 Success Status Code: 200
 Returns: JSON
-``` JSON
+``` 
 {
   id: “Integer”, 
   title: “String”,
