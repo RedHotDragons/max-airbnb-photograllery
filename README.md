@@ -8,9 +8,13 @@ Success Status Code: 200
 Returns: JSON
 {
   id: “Integer”, 
+  
   title: “String”,
+  
   photos: [ “String”, “String”, … ],
+  
   averageStars: “Double”,
+  
   reviewCount: “Integer”,
   superhost: “Boolean”,
   city: “String”,
