@@ -1,5 +1,5 @@
 ## Get intro info  
-- GET </api/intros/:id>
+- GET <code>/api/intros/:id</code>
 Path Parameters:  
 - id intro id  
 Success Status Code: 200  
