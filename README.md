@@ -2,8 +2,8 @@
 - GET <code>/api/intros/:id</code>
 Path Parameters:  
 - <code>id</code> intro id  
-*Success Status Code*: <code>200</code>  
-*Returns*: JSON  
+**Success Status Code**: <code>200</code>  
+**Returns**: JSON  
 ``` 
 {
   id: “Integer”, 
@@ -26,8 +26,8 @@ Path Parameters:
 
 ## Add intro info  
 - POST <code>/api/intros</code>  
-*Success Status Code*: <code>201</code>  
-*Request Body*: Expects JSON with the following keys.  
+**Success Status Code**: <code>201</code>  
+**Request Body**: Expects JSON with the following keys.  
 ```
 {
   id: “Integer”, 
