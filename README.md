@@ -49,8 +49,8 @@ Path Parameters:
 - POST <code>/api/intros/:id/photos</code>  
 Path Parameters:  
 - <code>id</code> intro id  
-Success Status Code: <code>201</code>  
-Request Body: Expects JSON with the following keys.  
+**Success Status Code**: <code>201</code>  
+**Request Body**: Expects JSON with the following keys.  
 ```
 {
   id: “Integer”, 
@@ -62,8 +62,8 @@ Request Body: Expects JSON with the following keys.
 - PATCH <code>/api/intros/:id</code>  
 Path Parameters:  
 - <code>id</code> intro id  
-Success Status Code: <code>204</code>  
-Request Body: Expects JSON with any of the following keys (include only keys to be updated)  
+**Success Status Code**: <code>204</code>  
+**Request Body**: Expects JSON with any of the following keys (include only keys to be updated)  
 ```
 {
   title: “String”,
@@ -87,11 +87,11 @@ Request Body: Expects JSON with any of the following keys (include only keys to 
 - DELETE <code>/api/intros/:id</code>  
 Path Parameters:  
 - <code>id</code> intro id  
-Success Status Code: <code>204</code>  
+**Success Status Code**: <code>204</code>  
  
 ## Delete photo from intro info  
 - DELETE <code>/api/intros/:id/:photoNumber</code>  
 Path Parameters:  
 - <code>id</code> intro id  
 - photoNumber order of photo  
-Success Status Code: <code>204</code>  
+**Success Status Code**: <code>204</code>  
