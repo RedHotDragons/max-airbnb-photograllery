@@ -25,7 +25,7 @@ Returns: JSON
 ```
 
 ## Add intro info  
-- POST /api/intros  
+- POST <code>/api/intros</code>  
 Success Status Code: 201  
 Request Body: Expects JSON with the following keys.  
 ```
@@ -46,7 +46,7 @@ Request Body: Expects JSON with the following keys.
 ```
 
 ## Add photo to intro info  
-- POST /api/intros/:id/photos  
+- POST <code>/api/intros/:id/photos</code>  
 Path Parameters:  
 - id intro id  
 Success Status Code: 201  
@@ -59,7 +59,7 @@ Request Body: Expects JSON with the following keys.
 ```
 
 ## Update intro info  
-- PATCH /api/intros/:id  
+- PATCH <code>/api/intros/:id</code>  
 Path Parameters:  
 - id intro id  
 Success Status Code: 204  
@@ -84,13 +84,13 @@ Request Body: Expects JSON with any of the following keys (include only keys to 
 ```
 
 ## Delete intro  
-- DELETE /api/intros/:id  
+- DELETE <code>/api/intros/:id</code>  
 Path Parameters:  
 - id intro id  
 Success Status Code: 204  
  
 ## Delete photo from intro info  
-- DELETE /api/intros/:id/:photoNumber  
+- DELETE <code>/api/intros/:id/:photoNumber</code>  
 Path Parameters:  
 - id intro id  
 - photoNumber order of photo  
