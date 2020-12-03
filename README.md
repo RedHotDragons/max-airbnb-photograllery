@@ -1,7 +1,7 @@
 ## Get intro info  
-        - GET <code>/api/intros/:id</code>
+   - GET <code>/api/intros/:id</code>
 Path Parameters:  
-        - <code>id</code> intro id  
+   - <code>id</code> intro id  
 **Success Status Code**: <code>200</code>  
 **Returns**: JSON  
 ``` 
