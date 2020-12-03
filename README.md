@@ -1,7 +1,7 @@
 ## Get intro info  
 - GET <code>/api/intros/:id</code>
 Path Parameters:  
-- id intro id  
+- <code>id</code> intro id  
 Success Status Code: 200  
 Returns: JSON  
 ``` 
@@ -48,7 +48,7 @@ Request Body: Expects JSON with the following keys.
 ## Add photo to intro info  
 - POST <code>/api/intros/:id/photos</code>  
 Path Parameters:  
-- id intro id  
+- <code>id</code> intro id  
 Success Status Code: 201  
 Request Body: Expects JSON with the following keys.  
 ```
@@ -61,7 +61,7 @@ Request Body: Expects JSON with the following keys.
 ## Update intro info  
 - PATCH <code>/api/intros/:id</code>  
 Path Parameters:  
-- id intro id  
+- <code>id</code> intro id  
 Success Status Code: 204  
 Request Body: Expects JSON with any of the following keys (include only keys to be updated)  
 ```
@@ -86,12 +86,12 @@ Request Body: Expects JSON with any of the following keys (include only keys to 
 ## Delete intro  
 - DELETE <code>/api/intros/:id</code>  
 Path Parameters:  
-- id intro id  
+- <code>id</code> intro id  
 Success Status Code: 204  
  
 ## Delete photo from intro info  
 - DELETE <code>/api/intros/:id/:photoNumber</code>  
 Path Parameters:  
-- id intro id  
+- <code>id</code> intro id  
 - photoNumber order of photo  
 Success Status Code: 204  
