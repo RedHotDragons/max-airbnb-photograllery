@@ -24,10 +24,11 @@ Returns: JSON
 }
 ```
 
-## Add intro info
-- POST /api/intros
-Success Status Code: 201
-Request Body: Expects JSON with the following keys.
+## Add intro info  
+- POST /api/intros  
+Success Status Code: 201  
+Request Body: Expects JSON with the following keys.  
+```
 {
   id: “Integer”, 
   title: “String”,
@@ -42,24 +43,28 @@ Request Body: Expects JSON with the following keys.
   beds: “Integer”,
   baths: “Double”
 }
+```
 
-## Add photo to intro info
-- POST /api/intros/:id/photos
-Path Parameters:
-- id intro id
-Success Status Code: 201
-Request Body: Expects JSON with the following keys.
+## Add photo to intro info  
+- POST /api/intros/:id/photos  
+Path Parameters:  
+- id intro id  
+Success Status Code: 201  
+Request Body: Expects JSON with the following keys.  
+```
 {
   id: “Integer”, 
   photos: [ “String”, “String”, … ]
 }
+```
 
-## Update intro info
-- PATCH /api/intros/:id
-Path Parameters:
-- id intro id
-Success Status Code: 204
-Request Body: Expects JSON with any of the following keys (include only keys to be updated)
+## Update intro info  
+- PATCH /api/intros/:id  
+Path Parameters:  
+- id intro id  
+Success Status Code: 204  
+Request Body: Expects JSON with any of the following keys (include only keys to be updated)  
+```
 {
   title: “String”,
   photos: [ “String”, “String”, … ],
@@ -76,16 +81,17 @@ Request Body: Expects JSON with any of the following keys (include only keys to 
   beds: “Integer”,
   baths: “Double”
 }
+```
 
-## Delete intro
-- DELETE /api/intros/:id
-Path Parameters:
-- id intro id
-Success Status Code: 204
+## Delete intro  
+- DELETE /api/intros/:id  
+Path Parameters:  
+- id intro id  
+Success Status Code: 204  
  
-## Delete photo from intro info
-- DELETE /api/intros/:id/:photoNumber
-Path Parameters:
-- id intro id
-- photoNumber order of photo
-Success Status Code: 204
+## Delete photo from intro info  
+- DELETE /api/intros/:id/:photoNumber  
+Path Parameters:  
+- id intro id  
+- photoNumber order of photo  
+Success Status Code: 204  
