@@ -6,15 +6,12 @@ Path Parameters:
 - id intro id
 Success Status Code: 200
 Returns: JSON
+``` JSON
 {
   id: “Integer”, 
-  
   title: “String”,
-  
   photos: [ “String”, “String”, … ],
-  
   averageStars: “Double”,
-  
   reviewCount: “Integer”,
   superhost: “Boolean”,
   city: “String”,
@@ -27,6 +24,7 @@ Returns: JSON
   beds: “Integer”,
   baths: “Double”
 }
+```
 
 ## Add intro info
 - POST /api/intros
