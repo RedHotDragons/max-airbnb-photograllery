@@ -4,8 +4,6 @@ mongoose.connect('mongodb://localhost/airbnb',{useNewUrlParser: true});
 
 const Listing = require('./dbschema.js');
 
-
-
 console.log('here');
 
 var searchdb = function (callback) {
