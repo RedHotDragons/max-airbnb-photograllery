@@ -9,12 +9,11 @@ console.log('here');
 var searchdb = function (callback) {
 
   // console.log('here');
-  Listing.Sonja.find({name: 'Sonja'}, (err,rows) => {
+  Listing.find({name: 'Sonja'}, (err,rows) => {
     callback(err,rows);
 
   });
 };
-
 
 
 module.exports.searchdb = searchdb;

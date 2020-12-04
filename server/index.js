@@ -3,8 +3,8 @@ const app = express();
 const port = 3001;
 const axios = require('axios');
 const db = require('../Database/searchdb.js');
-const router = express.Router()
-const Profile = require('../Database/Profile');
+// const router = express.Router()
+// const Profile = require('../Database/Profile');
 
 
 
