@@ -21,6 +21,14 @@ const listingSchema = new mongoose.Schema({
   photo4:String,
   photo5:String,
   photo6:String
+  // photoArr: [
+  //   String,
+  //   String,
+  //   String,
+  //   String,
+  //   String,
+  //   String
+  // ]
 });
 
 var Listing = mongoose.model('Listing', listingSchema);
