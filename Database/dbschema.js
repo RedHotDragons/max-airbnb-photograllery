@@ -13,6 +13,7 @@ db.once('open', function() {
 });
 
 const listingSchema = new mongoose.Schema({
+  listingId:Number,
   name:String,
   photo1:String,
   photo2:String,
@@ -24,21 +25,22 @@ const listingSchema = new mongoose.Schema({
 
 var Listing = mongoose.model('Listing', listingSchema);
 
-const listingOne = new Listing({
-  name:'Sonja',
-  photo1:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo1.jpg',
-  photo2:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo2.jpg',
-  photo3:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo3.jpg',
-  photo4:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo4.jpg',
-  photo5:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo5.jpg',
-  photo6:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo6.jpg'
-})
-
-listingOne.save();
-
+// const listingOne = new Listing({
+//   listingId: 2,
+//   name:'Sonja',
+//   photo1:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo1.jpg',
+//   photo2:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo2.jpg',
+//   photo3:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo3.jpg',
+//   photo4:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo4.jpg',
+//   photo5:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo5.jpg',
+//   photo6:'https://airbnb-photo-gallery.s3-us-west-1.amazonaws.com/SonjaHouse/photo6.jpg'
+// })
 
 
-module.exports.Sonja = Listing;
+// listingOne.save();
+
+
+module.exports = Listing;
 
 
 
