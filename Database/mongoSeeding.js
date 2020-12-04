@@ -10,10 +10,10 @@ var seed = () => {
       name:'Sonja',
       photo1:'https://loremflickr.com/320/240/treehouse,tree',
       photo2:'https://loremflickr.com/320/240/treehouse,forest',
-      photo3:'https://loremflickr.com/320/240/treehouse,high',
-      photo4:'https://loremflickr.com/320/240/treehouse,low',
-      photo5:'https://loremflickr.com/320/240/treehouse,empty',
-      photo6:'hhttps://loremflickr.com/320/240/treehouse,full',
+      photo3:'https://loremflickr.com/320/240/treehouse,green',
+      photo4:'https://loremflickr.com/320/240/treehouse,brown',
+      photo5:'https://loremflickr.com/320/240/treehouse,light',
+      photo6:'hhttps://loremflickr.com/320/240/treehouse,dark',
     }
   }
   for (var i = 0; i < 3; i++) {
