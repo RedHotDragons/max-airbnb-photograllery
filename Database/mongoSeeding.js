@@ -16,19 +16,33 @@ var seed = () => {
       photo6:'hhttps://loremflickr.com/320/240/treehouse,dark',
     }
   }
-  for (var i = 0; i < 100000; i++) {
+  for (var i = 0; i < 1000000; i++) {
     docToInsert = documentGenerator(i);
     docsToInsert.push(docToInsert);
-  }
-  Listing.insertMany(docsToInsert, (err, data) => {
-    if (err) {
-      console.log(err);
-      return;
-    } else {
-      console.log('Data seeded successfully');
-      // mongoose.connection.close();
+    if (i % 10000 === 0) {
+      Listing.insertMany(docsToInsert, (err, data) => {
+        if (err) {
+          console.log(err);
+          return;
+        } else {
+          console.log('Data seeded successfully');
+          // mongoose.connection.close();
+        }
+      })
+      docsToInsert = [];
     }
-  })
+  }
+  // Listing.insertMany(docsToInsert, (err, data) => {
+  //   if (err) {
+  //     console.log(err);
+  //     return;
+  //   } else {
+  //     console.log('Data seeded successfully');
+  //     // mongoose.connection.close();
+  //   }
+  // })
+  console.log('Data seeded successfully');
+  // mongoose.connection.close();
 }
 
 seed();
@@ -58,3 +72,16 @@ seed();
 // })
 
 // listingOne.save();
+
+// for (var i = 0; i <= 1000; i++) {
+//   docToInsert = documentGenerator(i);
+//   docsToInsert.push(docToInsert);
+//   if (i % 100 === 0) {
+//     Listing.insertMany(docsToInsert)
+//     docsToInsert = [];
+//   }
+//   if (i === 1000) {
+//     console.log('Data seeded successfully');
+//     mongoose.connection.close();
+//   }
+// }

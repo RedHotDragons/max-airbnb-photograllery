@@ -34,5 +34,3 @@ const listingSchema = new mongoose.Schema({
 var Listing = mongoose.model('Listing', listingSchema);
 
 module.exports = Listing;
-
-// trivial change
