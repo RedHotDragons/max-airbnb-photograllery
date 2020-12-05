@@ -14,7 +14,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       i -= 1;
       id += 1;
       let index = Math.floor((housingOptions.length * Math.random()));
-      let url ='https://loremflickr.com/320/240/big,' + housingOptions[index];
+      let url ='https://loremflickr.com/320/240/' + housingOptions[index];
       let listingId = Math.floor(Math.random() * 10000000);
       const data = `${id},${url},${listingId}\n`;
       if (i === 0) {
@@ -39,7 +39,7 @@ writeTenMillionUsers(writeUsers, 'utf-8', () => {
 });
 
 // RUN CSV
-// node ./Database/mpsqlSeeding.js
+// node ./Database/tester.js
 
 //IMPORT CSV INTO Postgres
-// COPY test(id, photo1, photo2, photo3, photo4, photo5, photo6) FROM '/Users/maxeinhorn/coding/max-airbnb-photograllery/minilistings.csv' DELIMITER ',' CSV HEADER;
+// COPY photos(id, url, listingId) FROM '/Users/maxeinhorn/coding/max-airbnb-photograllery/test.csv' DELIMITER ',' CSV HEADER;

@@ -22,7 +22,7 @@ CREATE TABLE listings (
 );
 
 CREATE TABLE photos (
-  id INT primary key GENERATED ALWAYS AS IDENTITY,
+  id INT primary key,
   url VARCHAR(300),
   listingId INT,
   CONSTRAINT fk_listingId
