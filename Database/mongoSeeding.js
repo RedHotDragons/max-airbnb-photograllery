@@ -20,14 +20,12 @@ var seed = () => {
     docToInsert = documentGenerator(i);
     docsToInsert.push(docToInsert);
     if (i % 10000 === 0) {
-      Listing.insertMany(docsToInsert, (err, data) => {
-        if (err) {
-          console.log(err);
-          return;
-        } else {
-          console.log('Data seeded successfully');
-          // mongoose.connection.close();
-        }
+      Listing.insertMany(docsToInsert)
+      .then(function() {
+        console.log('Data seeded successfully');
+      })
+      .catch(function(err) {
+        console.log(err);
       })
       docsToInsert = [];
     }
