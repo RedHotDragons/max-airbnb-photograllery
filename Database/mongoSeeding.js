@@ -16,7 +16,7 @@ var seed = () => {
       photo6:'hhttps://loremflickr.com/320/240/treehouse,dark',
     }
   }
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 100000; i++) {
     docToInsert = documentGenerator(i);
     docsToInsert.push(docToInsert);
   }
@@ -26,28 +26,18 @@ var seed = () => {
       return;
     } else {
       console.log('Data seeded successfully');
-      mongoose.connection.close();
+      // mongoose.connection.close();
     }
   })
 }
 
 seed();
 
-
-// const listingOne = new Listing({
-//   listingId: 3,
-//   name:'Sonja',
-//   photo1:'https://loremflickr.com/320/240/treehouse,tree',
-//   photo2:'https://loremflickr.com/320/240/treehouse,forest',
-//   photo3:'https://loremflickr.com/320/240/treehouse,high',
-//   photo4:'https://loremflickr.com/320/240/treehouse,low',
-//   photo5:'https://loremflickr.com/320/240/treehouse,empty',
-//   photo6:'hhttps://loremflickr.com/320/240/treehouse,full',
-// })
-
-// listingOne.save();
-
+// SEEDING SCRIPT
 // node ./Database/mongoSeeding.js
+
+// EXPORT TO CSC
+// mongoexport --collection=listings --db=airbnb --out=listings.csv
 
 
 
