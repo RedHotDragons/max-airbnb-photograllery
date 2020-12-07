@@ -5,7 +5,7 @@ const writeUsers = fs.createWriteStream('psqlListings.csv');
 writeUsers.write('id,url,listingId\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
-  let i = 100;
+  let i = 10000000;
   let id = 0;
   let housingOptions = ['treehouse', 'igloo', 'castle', 'hut', 'shack', 'bungalow', 'highrise'];
 
@@ -19,7 +19,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       id += 1;
       let index = Math.floor((housingOptions.length * Math.random()));
 
-      let title = faker.random.words();
+      let title = faker.name.lastName();
       let averageStars = faker.random.number({'min': 1, 'max': 5});
       let reviewCount = faker.random.number({'min': 1, 'max': 5});
       let superhost = faker.random.boolean();

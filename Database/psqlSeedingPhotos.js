@@ -5,7 +5,7 @@ const writeUsers = fs.createWriteStream('psqlphotos.csv');
 writeUsers.write('id,url,listingId\n', 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
-  let i = 100;
+  let i = 100000000;
   let id = 0;
   let housingOptions = ['treehouse', 'igloo', 'castle', 'hut', 'shack', 'bungalow', 'highrise'];
   function write() {
@@ -15,7 +15,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       id += 1;
       let index = Math.floor((housingOptions.length * Math.random()));
       let url ='https://loremflickr.com/320/240/' + housingOptions[index];
-      let listingId = Math.floor(Math.random() * 10000000);
+      let listingId = Math.floor(Math.random() * 9999999) + 1;
       const data = `${id},${url},${listingId}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
@@ -39,7 +39,7 @@ writeTenMillionUsers(writeUsers, 'utf-8', () => {
 });
 
 // RUN CSV
-// node ./Database/tester.js
+// node ./Database/psqlSeedingPhotos.js
 
 //IMPORT CSV INTO Postgres
-// COPY photos(id, url, listingId) FROM '/Users/maxeinhorn/coding/max-airbnb-photograllery/test.csv' DELIMITER ',' CSV HEADER;
+// COPY photos(id, url, listingId) FROM '/Users/maxeinhorn/coding/max-airbnb-photograllery/psqlphotos.csv' DELIMITER ',' CSV HEADER;
