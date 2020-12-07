@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect('mongodb://localhost/airbnb',{useNewUrlParser: true});
 
-const Listing = require('./dbschema.js');
+const Listing = require('./mongoSchema.js');
 
 var searchdb = function (callback) {
 

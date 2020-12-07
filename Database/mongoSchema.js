@@ -12,23 +12,33 @@ db.once('open', function() {
   console.log('connection formed!!');
 });
 
+const photoSchema = new mongoose.Schema({
+  id: Number,
+  url: String,
+  listing_id: Number
+})
+
 const listingSchema = new mongoose.Schema({
-  listingId:Number,
-  name:String,
-  photo1:String,
-  photo2:String,
-  photo3:String,
-  photo4:String,
-  photo5:String,
-  photo6:String
-  // photoArr: [
-  //   String,
-  //   String,
-  //   String,
-  //   String,
-  //   String,
-  //   String
-  // ]
+  id: Number,
+  title: String,
+  average_stars: Number,
+  review_count: Number,
+  superhost: Boolean,
+  city: String,
+  state: String,
+  country: String,
+  home_type: String,
+  host: String,
+  guests: Number,
+  bedrooms: Number,
+  beds: Number,
+  baths: Number,
+  photos: {
+    "type" : "array",
+    "items": {
+      "type": "number"
+    }
+  }
 });
 
 var Listing = mongoose.model('Listing', listingSchema);
