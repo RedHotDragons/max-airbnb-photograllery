@@ -3,8 +3,8 @@ const app = express();
 const port = 3001;
 const axios = require('axios');
 const db = require('../Database/searchdb.js');
-
-
+// const router = express.Router()
+// const Profile = require('../Database/Profile');
 
 app.use(express.static(__dirname +'/../client/dist'))
 
@@ -30,3 +30,25 @@ var server = app.listen(port, function () {
 
 
 module.exports.server = server;
+
+// router.get('/', function(req, res, next) {
+
+//   Profile.find(null, function(err, profiles) {
+//     if (err) {
+//       console.log('Error is: ', err)
+//     }
+//     res.json({
+//       confirmation: 'success',
+//       results: profiles
+//     })
+//   })
+
+//   // res.render('index', { header: 'TESTER', visitor: 'Max' })
+
+//   // res.json({
+//   //   confirmation: 'success',
+//   //   message: 'hello'
+//   // })
+// })
+
+// module.exports = router;
