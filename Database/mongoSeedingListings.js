@@ -2,21 +2,21 @@ const faker = require('faker');
 const fs = require('fs');
 
 const writeUsers = fs.createWriteStream('mongoListings.csv');
-writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country,homeType,host,guests,bedrooms,beds,baths,photos\n', 'utf8');
+writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country,homeType,host,guests,bedrooms,beds,baths\n', 'utf8');
 
-function generatePhotoArray () {
-  var photoArr = [];
-  var numberOfPhotos = Math.floor(Math.random() * 10) + 5;
-  for (var i = 0; i < numberOfPhotos; i++) {
-    var photoId = Math.floor(Math.random() * 1000);
-    photoArr.push(photoId);
-  }
-  console.log(photoArr);
-  return photoArr;
-}
+// function generatePhotoArray () {
+//   var photoArr = [];
+//   var numberOfPhotos = Math.floor(Math.random() * 10) + 5;
+//   for (var i = 0; i < numberOfPhotos; i++) {
+//     var photoId = Math.floor(Math.random() * 1000);
+//     photoArr.push(photoId);
+//   }
+//   console.log(photoArr);
+//   return photoArr;
+// }
 
 function writeTenMillionUsers(writer, encoding, callback) {
-  let i = 5;
+  let i = 10000000;
   let id = 0;
   let housingOptions = ['treehouse', 'igloo', 'castle', 'hut', 'shack', 'bungalow', 'highrise'];
   function write() {
@@ -39,15 +39,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       let bedrooms = faker.random.number({'min': 1, 'max': 5});
       let beds = faker.random.number({'min': 1, 'max': 10});
       let baths = faker.random.number({'min': 1, 'max': 10});
-
-      let photos = generatePhotoArray();
-      // let photo1 ='https://loremflickr.com/320/240/big,' + housingOptions[index];
-      // let photo2 ='https://loremflickr.com/320/240/small,' + housingOptions[index];
-      // let photo3 ='https://loremflickr.com/320/240/light,' + housingOptions[index];
-      // let photo4 ='https://loremflickr.com/320/240/dark,' + housingOptions[index];
-      // let photo5 ='https://loremflickr.com/320/240/wide,' + housingOptions[index];
-      // let photo6 ='https://loremflickr.com/320/240/narrow' + housingOptions[index];
-      const data = `${id},${title},${averageStars},${reviewCount},${superhost},${city},${state},${country},${homeType},${host},${guests},${bedrooms},${beds},${baths},"{${photos}}"\n`;
+      const data = `${id},${title},${averageStars},${reviewCount},${superhost},${city},${state},${country},${homeType},${host},${guests},${bedrooms},${beds},${baths}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
