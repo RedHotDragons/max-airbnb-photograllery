@@ -23,14 +23,19 @@ export default class App extends React.Component {
     this.Modalsetup = this.Modalsetup.bind(this);
   }
 
+  console.log('#$@#$%@#$%')
   componentDidMount () {
-    axios.get(`/api/photo-gallery/data`)
-    .then((data) => {
-      this.extracturls(data.data[0])
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+    // axios.get(`/api/photo-gallery/data`)
+    // .then((data) => {
+    //   console.log('Return trip complete')
+    //   console.log(data.data);
+    //   this.extracturls(data.data[0])
+    // })
+    // .catch((err) => {
+    //   console.log('RETURN TRIP ERROR');
+    //   console.log('Return trip error: ', err);
+    // })
+    console.log('Hello!')
   }
 
   extracturls (listingdata) {
