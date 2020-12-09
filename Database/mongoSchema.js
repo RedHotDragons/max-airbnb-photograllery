@@ -12,12 +12,6 @@ db.once('open', function() {
   console.log('connection formed!!');
 });
 
-const photoSchema = new mongoose.Schema({
-  id: Number,
-  url: String,
-  listing_id: Number
-})
-
 const listingSchema = new mongoose.Schema({
   id: Number,
   title: String,
