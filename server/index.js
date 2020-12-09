@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
-const db = require('../Database/searchdb.js');
+const db = require('../database/searchdb.js');
 // const router = express.Router()
 // const Profile = require('../Database/Profile');
 
@@ -13,6 +13,7 @@ app.get('/api/photo-gallery/data', function (req,res) {
   //invoke the fetchphotos function
 
   db.searchdb((err,listing) => {
+    console.log('%%%')
     if(err) {
       res.status(400)
       res.end();
@@ -23,7 +24,6 @@ app.get('/api/photo-gallery/data', function (req,res) {
 
 
 var server = app.listen(port, function () {
-
   console.log(`Server is listening on port: ${port}`);
 });
 

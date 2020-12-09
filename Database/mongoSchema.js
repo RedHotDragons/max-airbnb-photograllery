@@ -32,7 +32,27 @@ const listingSchema = new mongoose.Schema({
   guests: Number,
   bedrooms: Number,
   beds: Number,
-  baths: Number
+  baths: Number,
+  photo1: String,
+  photo2: String,
+  photo3: String,
+  photo4: String,
+  photo5: String,
+  photo6: String,
+  photo7: String,
+  photo8: String,
+  photo9: String,
+  photo10: String,
+  photo11: String,
+  photo12: String,
+  photo13: String,
+  photo14: String,
+  photo15: String,
+  photo16: String,
+  photo17: String,
+  photo18: String,
+  photo19: String,
+  photo20: String
 });
 
 var Listing = mongoose.model('Listing', listingSchema);

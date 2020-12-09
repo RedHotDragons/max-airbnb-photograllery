@@ -26,7 +26,6 @@ export default class App extends React.Component {
   componentDidMount () {
     axios.get(`/api/photo-gallery/data`)
     .then((data) => {
-
       this.extracturls(data.data[0])
     })
     .catch((err) => {
