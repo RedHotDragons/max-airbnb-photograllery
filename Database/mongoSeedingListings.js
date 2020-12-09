@@ -1,8 +1,8 @@
 const faker = require('faker');
 const fs = require('fs');
 
-const writeUsers = fs.createWriteStream('mongoListings.csv');
-writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country,homeType,host,guests,bedrooms,beds,baths,photo1,photo2,photo3,photo4,photo5,photo6,photo7,photo8,photo9,photo10,photo11,photo12,photo13,photo14,photo15,photo16,photo17,photo18,photo19,photo20\n', 'utf8');
+const writeUsers = fs.createWriteStream('mongoListings.json');
+// writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country,homeType,host,guests,bedrooms,beds,baths,photos\n', 'utf8');
 
 // function generatePhotoArray () {
 //   var photoArr = [];
@@ -16,7 +16,7 @@ writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country
 // }
 
 function writeTenMillionUsers(writer, encoding, callback) {
-  let i = 10000000;
+  let i = 100;
   let id = 0;
   let housingOptions = ['treehouse', 'igloo', 'castle', 'hut', 'shack', 'bungalow', 'highrise'];
   function write() {
@@ -60,7 +60,8 @@ function writeTenMillionUsers(writer, encoding, callback) {
       let photo18 = 18 <= numPhotos ? 'https://loremflickr.com/320/240/' + housingOptions[index] : '';
       let photo19 = 19 <= numPhotos ? 'https://loremflickr.com/320/240/' + housingOptions[index] : '';
       let photo20 = 20 <= numPhotos ? 'https://loremflickr.com/320/240/' + housingOptions[index] : '';
-      const data = `${id},${title},${averageStars},${reviewCount},${superhost},${city},${state},${country},${homeType},${host},${guests},${bedrooms},${beds},${baths},${photo1},${photo2},${photo3},${photo4},${photo5},${photo6},${photo7},${photo8},${photo9},${photo10},${photo11},${photo12},${photo13},${photo14},${photo15},${photo16},${photo17},${photo18},${photo19},${photo20}\n`;
+      let photos = { photo1: photo1, photo2: photo2, photo3: photo3, photo4: photo4, photo5: photo5, photo6: photo6, photo7: photo7, photo8: photo8, photo9: photo9, photo10: photo10, photo11: photo11, photo12: photo12, photo13: photo13, photo14: photo14, photo15: photo15, photo16: photo16, photo17: photo17, photo18: photo18, photo19: photo19, photo20: photo20 };
+      const data = `{${id},${title},${averageStars},${reviewCount},${superhost},${city},${state},${country},${homeType},${host},${guests},${bedrooms},${beds},${baths},"${JSON.stringify(photos)}} \n`;
       if (i === 0) {
         writer.write(data, encoding, callback);
       } else {
@@ -86,4 +87,4 @@ writeTenMillionUsers(writeUsers, 'utf-8', () => {
 // node ./Database/mongoSeedingListings.js
 
 //IMPORT CSV INTO MONGO
-// mongoimport --db airbnb --collection listings --type csv --headerline --ignoreBlanks --file ./mongoListings.csv
+// mongoimport --db airbnb3 --collection listings --type json --file ./mongoListings.json --drop
