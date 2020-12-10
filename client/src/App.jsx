@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(`/api/photo-gallery/data`)
+    axios.get(`/api/photo-gallery${window.location.pathname}`)
     .then((data) => {
       console.log('Return trip complete')
       console.log(data.data);
