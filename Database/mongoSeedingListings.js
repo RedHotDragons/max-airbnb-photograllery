@@ -16,7 +16,7 @@ writeUsers.write('id,title,averageStars,reviewCount,superhost,city,state,country
 // }
 
 function writeTenMillionUsers(writer, encoding, callback) {
-  let i = 10000000;
+  let i = 100;
   let id = 0;
   let housingOptions = ['treehouse', 'igloo', 'castle', 'hut', 'shack', 'bungalow', 'highrise'];
   function write() {

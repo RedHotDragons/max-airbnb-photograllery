@@ -120,5 +120,6 @@ helper/config.js
 
 *.csv
 
+# Trying to hit New Relic
 newrelic.js
 ./newrelic.js

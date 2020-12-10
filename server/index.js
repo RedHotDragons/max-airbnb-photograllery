@@ -1,10 +1,11 @@
+var newrelic = require('newrelic');
+
 const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
 const db = require('../database/searchdb.js');
 const path = require('path');
-require('newrelic');
 
 // const router = express.Router()
 // const Profile = require('../Database/Profile');
