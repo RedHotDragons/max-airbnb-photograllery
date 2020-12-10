@@ -6,10 +6,9 @@ const Listing = require('./mongoSchema.js');
 
 var searchdb = function (callback) {
 
-  console.log('here');
-  Listing.find({name: 'Sonja'}, (err,rows) => {
+  console.log('You have reached the database');
+  Listing.find({id: '102'}, (err,rows) => {
     callback(err,rows);
-
   });
 };
 
