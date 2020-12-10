@@ -119,3 +119,6 @@ out
 helper/config.js
 
 *.csv
+
+newrelic.js
+./newrelic.js
