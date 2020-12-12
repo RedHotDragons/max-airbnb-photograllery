@@ -4,12 +4,9 @@ mongoose.connect('mongodb://localhost/airbnb',{useNewUrlParser: true});
 
 const Listing = require('./mongoSchema.js');
 
-var searchdb = function (callback) {
-
-  // console.log('here');
-  Listing.find({name: 'Sonja'}, (err,rows) => {
+var searchdb = function (id, callback) {
+  Listing.find({id: id}, (err,rows) => {
     callback(err,rows);
-
   });
 };
 

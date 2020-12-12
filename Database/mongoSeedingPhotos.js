@@ -15,7 +15,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       id += 1;
       let index = Math.floor((housingOptions.length * Math.random()));
       let url = "https://loremflickr.com/320/240/" + housingOptions[index];
-      let listing_id = Math.floor((Math.random() * 100))
+      let listing_id = Math.ceil((Math.random() * 10000000))
       const data = `${id},${url},${listing_id}\n`;
       if (i === 0) {
         writer.write(data, encoding, callback);

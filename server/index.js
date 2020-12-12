@@ -1,18 +1,26 @@
+var newrelic = require('newrelic');
+
 const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
-const db = require('../Database/searchdb.js');
+const db = require('../database/searchdb.js');
+const path = require('path');
+
 // const router = express.Router()
 // const Profile = require('../Database/Profile');
 
 app.use(express.static(__dirname +'/../client/dist'))
 
-app.get('/api/photo-gallery/data', function (req,res) {
+app.get('/:id', function (req, res) {
+  res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
+});
+
+app.get('/api/photo-gallery/:id', function (req,res) {
   //get the correct folder name and the number of photos from the mysql database
   //invoke the fetchphotos function
-
-  db.searchdb((err,listing) => {
+  var listingId = req.params.id;
+  db.searchdb(listingId, (err,listing) => {
     if(err) {
       res.status(400)
       res.end();
@@ -23,7 +31,6 @@ app.get('/api/photo-gallery/data', function (req,res) {
 
 
 var server = app.listen(port, function () {
-
   console.log(`Server is listening on port: ${port}`);
 });
 

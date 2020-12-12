@@ -24,18 +24,19 @@ export default class App extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(`/api/photo-gallery/data`)
+    axios.get(`/api/photo-gallery${window.location.pathname}`)
     .then((data) => {
-
+      console.log('Return trip complete')
+      console.log(data.data);
       this.extracturls(data.data[0])
     })
     .catch((err) => {
-      console.log(err);
+      console.log('RETURN TRIP ERROR');
+      console.log('Return trip error: ', err);
     })
   }
 
   extracturls (listingdata) {
-
     var urls = [];
     var listingkeys = Object.keys(listingdata);
     for(var key of listingkeys) {
@@ -47,6 +48,7 @@ export default class App extends React.Component {
       urls: urls
     })
   }
+
   changeindex (event) {
     if(!event){
       var photo_id = 0;
@@ -63,7 +65,6 @@ export default class App extends React.Component {
 
   Modalsetup() {
     document.body.classList.toggle("lock");
-
   }
 
   Stackmodal () {
