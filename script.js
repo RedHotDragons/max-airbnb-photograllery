@@ -4,8 +4,8 @@ import { check, sleep } from 'k6';
 export let options = {
   vus: 10,
   stages: [
-    {duration: '5s', target: 20},
-    {duration: '5s', target: 100},
+    {duration: '5s', target: 1200},
+    {duration: '60s', target: 8000},
     {duration: '5s', target: 0},
   ]
 };
