@@ -11,7 +11,8 @@ export let options = {
 };
 
 export default function () {
-  let res = http.get('http://localhost:3001/');
+  var id = Math.ceil((Math.random() * 10000000))
+  let res = http.get(`http://localhost:3001/${id}`);
   check(res, {' status was 200': (r) => r.status === 200 });
   sleep(1);
 }
