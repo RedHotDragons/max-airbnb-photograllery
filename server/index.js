@@ -29,7 +29,6 @@ app.get('/api/photo-gallery/:id', function (req,res) {
   })
 })
 
-
 var server = app.listen(port, function () {
   console.log(`Server is listening on port: ${port}`);
 });
