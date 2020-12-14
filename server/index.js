@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
-const db = require('../database/searchdb.js');
+const db = require('../datab/searchdb.js');
 const path = require('path');
 
 // const router = express.Router()
