@@ -83,7 +83,7 @@ writeTenMillionUsers(writeUsers, 'utf-8', () => {
 });
 
 // RUN CSV
-// node ./Database/mongoSeedingListings.js
+// node ./datab/mongoSeedingListings.js
 
 //IMPORT CSV INTO MONGO
 // mongoimport --db airbnb --collection listings --type csv --headerline --ignoreBlanks --file ./mongoListings.csv
