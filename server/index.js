@@ -12,6 +12,10 @@ const path = require('path');
 
 app.use(express.static(__dirname +'/../client/dist'))
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
+});
+
 app.get('/:id', function (req, res) {
   res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
