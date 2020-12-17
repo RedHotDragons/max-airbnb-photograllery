@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect('mongodb://localhost/airbnb',{useNewUrlParser: true});
+mongoose.connect('mongodb://ec2-3-89-109-178.compute-1.amazonaws.com/airbnb',{useNewUrlParser: true});
 
 const Listing = require('./mongoSchema.js');
 

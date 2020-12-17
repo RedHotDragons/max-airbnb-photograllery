@@ -6,9 +6,12 @@ const port = 3001;
 const axios = require('axios');
 const db = require('../datab/searchdb.js');
 const path = require('path');
+const morgan = require('morgan');
 
 // const router = express.Router()
 // const Profile = require('../Database/Profile');
+
+app.use(morgan('dev'));
 
 app.use(express.static(__dirname +'/../client/dist'))
 
